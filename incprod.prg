@@ -1,0 +1,59 @@
+*
+* Inclusao de Produto
+*
+
+SAVE SCREEN TO TMP
+DO WHILE .T.
+   MESSAGE()
+   SELECT PRODUTO
+   SET ORDER TO 1
+   MOLDURA(12,01,18,76,STDMOLD,.T.,"Inclus„o de Produtos",STDINVE)
+   SETCOLOR(STDMOLD+","+STDINVE)
+   LOADVARS()
+   GO BOTTOM
+   HCODPROD = VAL(CODPROD) + 1
+   IF HCODPROD > 999
+      GO TOP
+      HCODTMP = VAL(CODPROD)
+      DO WHILE .NOT. EOF()
+         SKIP +1
+         IF VAL(CODPROD) > HCODTMP + 1
+            HCODPROD = HCODTMP + 1
+            EXIT
+         ENDIF
+         HCODTMP = VAL(CODPROD)
+      ENDDO
+   ENDIF
+   @ 13,05 SAY "C¢digo do Produto:" GET HCODPROD PICTURE "999"
+   SET CURSOR ON
+   READ
+   SET CURSOR OFF
+   IF LASTKEY() = 27 .OR. HCODPROD = 0
+      EXIT
+   ENDIF
+   HCODPROD = STRZERO(HCODPROD,3,0)
+   SETCOLOR(STDINVE)
+   @ 13,24 SAY HCODPROD
+   SETCOLOR(STDMOLD)
+   SEEK HCODPROD
+   IF FOUND()
+      MESSAGE("Registro j  Existe !!!")
+      INKEY(0)
+      MESSAGE()
+      LOOP
+   ENDIF
+   XCODPROD = HCODPROD
+   @ 15,05 SAY "Nome do Produto:  " GET XNOMEPROD PICTURE "@!"
+   @ 17,05 SAY "Valor do Produto: " GET XVALOR PICTURE "9,999.99"
+   SET CURSOR ON
+   READ
+   SET CURSOR OFF
+   IF .NOT. LASTKEY() = 27
+      ADD_REC(0)
+      SAVEVARS()
+      UNLOCK
+   ENDIF
+ENDDO
+RESTORE SCREEN FROM TMP
+RETURN
+
