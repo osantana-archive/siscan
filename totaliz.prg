@@ -7,10 +7,10 @@ DO WHILE .T.
    SELECT ALUNO
    SET ORDER TO 2
    GO  TOP
-   MOLDURA(12,01,18,76,STDMOLD,.T.,"TotalizaáÑo",STDINVE)
+   MOLDURA(12,01,18,76,STDMOLD,.T.,"Totaliza√ß√§o",STDINVE)
    SETCOLOR(STDMOLD+","+STDINVE)
    HNUMERO = 0
-   @ 13,05 SAY "Entre com o N£mero:"
+   @ 13,05 SAY "Entre com o N√∫mero:"
    @ 13,32 SAY "Senha:"
    HNUMERO = KINPUT(13,25,4,.T.)
    IF HNUMERO = "PHIL"
@@ -22,7 +22,7 @@ DO WHILE .T.
    HNUMERO = STRZERO(VAL(HNUMERO),4,0)
    SEEK HNUMERO
    IF .NOT. FOUND()
-      MESSAGE("Registro NÑo Existe !!!")
+      MESSAGE("Registro N√§o Existe !!!")
       LOOP
    ENDIF
    MESSAGE()
@@ -40,7 +40,7 @@ DO WHILE .T.
    ENDIF
    MESSAGE()
    IF SALDOS >= 1
-      MESSAGE("O Saldo s¢ Pode ser Retirado uma Vez por Semana...")
+      MESSAGE("O Saldo s√≥ Pode ser Retirado uma Vez por Semana...")
       INKEY(2)
       MESSAGE()
       EXIT

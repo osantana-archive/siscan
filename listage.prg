@@ -18,16 +18,16 @@ MAT1[5] = "CREDITO"
 IF PASS = "300477"
    MAT1[6] = "SENHA"
 ENDIF
-MAT2[1] = "N£mero"
+MAT2[1] = "NÃºmero"
 MAT2[2] = "Nome"
 MAT2[3] = "Semanas"
 MAT2[4] = "TipoPgto."
-MAT2[5] = "Cr‚dito"
+MAT2[5] = "CrÃ©dito"
 IF PASS = "300477"
    MAT2[6] = "Senha"
 ENDIF
 FOR TMP1 = 1 TO IF(PASS="300477",6,5)
-   MAT3[TMP1] = "ÄÂÄ"
+   MAT3[TMP1] = "â”€â”¬â”€"
 NEXT
 MOLDURA(12,01,21,76,STDMOLD,.T.,"Consulta de Alunos",STDINVE)
 SETCOLOR(STDMOLD+","+STDINVE) 

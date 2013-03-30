@@ -11,7 +11,7 @@ DO WHILE .T.
    SETCOLOR(STDMOLD+","+STDINVE)
    HNUMERO   = 0
    HSENHA    = 0
-   @ 13,05 SAY "Entre com o N£mero:"
+   @ 13,05 SAY "Entre com o NÃºmero:"
    HNUMERO = KINPUT(13,25,4,.T.)
    IF HNUMERO = "PHIL"
       EXIT
@@ -22,14 +22,14 @@ DO WHILE .T.
    HNUMERO = STRZERO(VAL(HNUMERO),4,0)
    SEEK HNUMERO
    IF .NOT. FOUND()
-      MESSAGE("Registro N„o Existe !!!")
+      MESSAGE("Registro NÃ¤o Existe !!!")
       LOOP
    ENDIF
    MESSAGE()
    @ 13,32 SAY ALUNO->NOME
    SUBTOTAL = SOMATORIA(HNUMERO)
    IF SUBTOTAL <= 0
-      MESSAGE("Conta j  foi Paga !!!")
+      MESSAGE("Conta jÃ¡ foi Paga !!!")
       LOOP
    ENDIF
    IF CREDITO > SUBTOTAL

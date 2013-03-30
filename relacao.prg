@@ -6,9 +6,9 @@ SAVE SCREEN TO TMP
 DO WHILE .T.
    SELECT ALUNO
    SET ORDER TO 2
-   MOLDURA(12,01,18,76,STDMOLD,.T.,"Emiss„o de Extrato",STDINVE)
+   MOLDURA(12,01,18,76,STDMOLD,.T.,"EmissÃ¤o de Extrato",STDINVE)
    HCODIGO = 0
-   @ 13,05 SAY "Entre com o N£mero:" GET HCODIGO PICTURE "9999"
+   @ 13,05 SAY "Entre com o NÃºmero:" GET HCODIGO PICTURE "9999"
    SET CURSOR ON
    READ
    SET CURSOR OFF
@@ -18,7 +18,7 @@ DO WHILE .T.
    HNUMERO = STRZERO(HCODIGO,4,0)
    SEEK HNUMERO
    IF .NOT. FOUND()
-      MESSAGE("Registro N„o Existe !!!")
+      MESSAGE("Registro NÃ¤o Existe !!!")
       LOOP
    ENDIF
    MESSAGE()

@@ -16,9 +16,9 @@ DO WHILE .T.
    SET COLOR TO N/W
    @ 11,34 SAY "  Produtos  "
    SET COLOR TO W+/N
-   @ 09,27 SAY "N£mero: "
+   @ 09,27 SAY "N√∫mero: "
    @ 09,42 SAY "Senha: "
-   @ 13,27 SAY "C¢digo: "
+   @ 13,27 SAY "C√≥digo: "
    @ 13,41 SAY "Quant.: "
    HNUMERO = KINPUT(09,35,04,.T.,"0",.T.)
    IF HNUMERO = "PHIL"
@@ -51,7 +51,7 @@ DO WHILE .T.
       LOOP
    ENDIF
    IF HNUMERO = "0001"
-      MESSAGE("Deseja sair do sistema? (ENTER - Sim / Outra Tecla - NÑo)")
+      MESSAGE("Deseja sair do sistema? (ENTER - Sim / Outra Tecla - N√§o)")
       IF INKEY(0) = 13
          RESTORE SCREEN FROM VARTELA
          SET CURSOR OFF
@@ -118,7 +118,7 @@ DO WHILE .T.
          LOOP
       ENDIF
       IF BLOQ
-         MESSAGE("O Produto NÑo est† Dispon°vel por Falta no Estoque...")
+         MESSAGE("O Produto N√§o est√° Dispon√≠vel por Falta no Estoque...")
          INKEY(2)
          MESSAGE()
          LOOP
@@ -127,7 +127,7 @@ DO WHILE .T.
       @ 18,27 SAY "PRODUTO: "+TRANSFORM(HNOME,"@S29")
       SELECT LANCAMEN
       SET ORDER TO 1
-      MESSAGE("Tecle ENTER Ap¢s a DigitaáÑo...")
+      MESSAGE("Tecle ENTER Ap√≥s a Digita√ß√§o...")
       @ 13,53 SAY IF(HCODPROD="999" .OR. HCODPROD="998","g","")
       HQUANT  = KINPUT(13,49,IF(HCODPROD="999" .OR. HCODPROD="998",3,2),.T.,"1",.T.)
       MESSAGE()

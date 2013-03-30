@@ -29,14 +29,14 @@ ENDIF
 PARAMETER filename,indxname
 CLEAR
 TEXT  
- ฺฤฤฤฤฤฤฤฤฤฤ ACTIVITIES ฤฤฤฤฤฤฤฤฤฤฤฤฟ ษอ CURRENT FILES ออหออ FLOCK STATUS อออป
- ณ  1. USE<file>/CLOSE<file>        ณ บ Data :           บ                   บ
- ณ  2. SET INDEX                    ณ บ Indx :           บ                   บ
- ณ  3. FLOCK() current file         ณ บ Usage:           บ                   บ
- ณ  4. RLOCK() current record       ณ ฬอ CURRENT RECORD อฮออ RLOCK STATUS อออน
- ณ  6. GOTO RECORD                  ณ บ                  บ                   บ
- ณ  5. UNLOCK ALL                   ณ บ                  บ                   บ
- ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู ศออออออออออออออออออสอออออออออออออออออออผ
+ โ”โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€ ACTIVITIES โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ” โ•”โ• CURRENT FILES โ•โ•โ•ฆโ•โ• FLOCK STATUS โ•โ•โ•โ•—
+ โ”  1. USE<file>/CLOSE<file>        โ” โ•‘ Data :           โ•‘                   โ•‘
+ โ”  2. SET INDEX                    โ” โ•‘ Indx :           โ•‘                   โ•‘
+ โ”  3. FLOCK() current file         โ” โ•‘ Usage:           โ•‘                   โ•‘
+ โ”  4. RLOCK() current record       โ” โ• โ• CURRENT RECORD โ•โ•ฌโ•โ• RLOCK STATUS โ•โ•โ•โ•ฃ
+ โ”  6. GOTO RECORD                  โ” โ•‘                  โ•‘                   โ•‘
+ โ”  5. UNLOCK ALL                   โ” โ•‘                  โ•‘                   โ•‘
+ โ””โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ”€โ” โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•ฉโ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•โ•
 ENDTEXT
 paramcnt = PCOUNT()
 IF paramcnt >=1
@@ -52,7 +52,7 @@ ELSE
   indxname = SPACE(8)
   filename = SPACE(8)
 ENDIF
-@ 1,38 SAY 'ษอ CURRENT FILES ออหออ FLOCK STATUS อออป'
+@ 1,38 SAY 'โ•”โ• CURRENT FILES โ•โ•โ•ฆโ•โ• FLOCK STATUS โ•โ•โ•โ•—'
 DO WHILE choice > 0
   
   @  2,4 PROMPT '1. USE<file>/CLOSE<file>  '
@@ -151,7 +151,7 @@ PROCEDURE show_rec
   IF .NOT.( BOF() .OR. EOF() )
     recno=STR(RECNO(),5)
     @ 9,0 TO reccnt+11,79
-    @ 9,2 SAY " FIELDNAME ฤฤ CONTENTS "
+    @ 9,2 SAY " FIELDNAME โ”€โ”€ CONTENTS "
     FOR i = 1 TO reccnt    && Room for 11 fields
       fld=FIELDNAME(i)
       @ 10 + i, 3 SAY  fld

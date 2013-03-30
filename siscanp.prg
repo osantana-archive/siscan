@@ -9,10 +9,10 @@ FUNCTION KINPUT
 PRIVATE Y,X,TAM,EX,CR1,STR,CY,CX,INI,CONF
 PARAMETERS Y,X,TAM,EX,INI,CONF
 CR1 = SETCOLOR(STDALER)
-@ 02,15 SAY "  Usu†rio entre com as informaáîes pelo teclado.  "
+@ 02,15 SAY "  Usu√°rio entre com as informa√ß√∂es pelo teclado.  "
 SETCOLOR("W/N")
-@ 02,65 SAY "‹"
-@ 03,16 SAY REPLICATE("ﬂ",50)
+@ 02,65 SAY "‚ñÑ"
+@ 03,16 SAY REPLICATE("‚ñÄ",50)
 SETCOLOR(CR1)
 INI  = IF(TYPE("INI" ) = "U","0",INI )
 CONF = IF(TYPE("CONF") = "U",.F.,CONF)
@@ -167,8 +167,8 @@ PARAMETERS Y1,X1,Y2,X2,CORFND,TP,TIT,CORTIT,SH
 TP = IF(TYPE("TP")="U",.F.,TP)
 SH = IF(TYPE("SH")="U",.T.,SH)
 CORANT = SETCOLOR(CORFND)
-@ Y1,X1,Y2,X2 BOX IF(TP,"⁄","⁄")+"ƒø≥Ÿƒ¿≥ "
-@ Y1,X1+1 SAY IF(TP,"ƒ","ƒ")
+@ Y1,X1,Y2,X2 BOX IF(TP,"‚îå","‚îå")+"‚îÄ‚îê‚îÇ‚îò‚îÄ‚îî‚îÇ "
+@ Y1,X1+1 SAY IF(TP,"‚îÄ","‚îÄ")
 IF TP
    SETCOLOR(CORTIT)
    @ Y1,X1+2 SAY ALIGN(TIT,"C",X2-X1-3)
@@ -204,7 +204,7 @@ CORANT3 = SETCOLOR(STDMOLD+","+STDINVE)
 OPC = IF(TYPE("PADRAO")="U",1,IF(PADRAO,1,2))
 @ 23,01 SAY TEXTO
 @ 23,COL()+3 PROMPT "  Sim  "
-@ 23,COL()+3 PROMPT "  NÑo  "
+@ 23,COL()+3 PROMPT "  N√§o  "
 MENU TO OPC
 @ 23,01 SAY SPACE(78)
 SETCOLOR(CORANT3)

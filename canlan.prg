@@ -8,10 +8,10 @@ DO WHILE .T.
    SET ORDER TO 2
    SET DELETED OFF
    GO TOP
-   MOLDURA(12,01,21,76,STDMOLD,.T.,"Cancela Lan‡amento",STDINVE)
+   MOLDURA(12,01,21,76,STDMOLD,.T.,"Cancela LanÃ§amento",STDINVE)
    SETCOLOR(STDMOLD+","+STDINVE)
    HNUMERO = SPACE(4)
-   @ 14,04 SAY "Entre com o N£mero:" GET HNUMERO PICTURE "9999"
+   @ 14,04 SAY "Entre com o NÃºmero:" GET HNUMERO PICTURE "9999"
    SET CONFIRM ON
    SET CURSOR ON
    READ
@@ -25,7 +25,7 @@ DO WHILE .T.
    HNUMERO = STRZERO(VAL(HNUMERO),4,0)
    SEEK HNUMERO
    IF .NOT. FOUND()
-      MESSAGE("Registro N„o Encontrado...")
+      MESSAGE("Registro NÃ¤o Encontrado...")
       LOOP
    ENDIF
    MESSAGE()
@@ -39,16 +39,16 @@ DO WHILE .T.
    MAT1[3] = "CODPROD"
    MAT1[4] = "VALOR"
    MAT1[5] = "IF(DELETED(),'Cancelado','         ')"
-   MAT2[1] = "C¢digo"
+   MAT2[1] = "CÃ³digo"
    MAT2[2] = "Data"
    MAT2[3] = "Produto"
    MAT2[4] = "Valor"
    MAT2[5] = "Estado"
-   MAT3[1] = "ÄÂÄ"
-   MAT3[2] = "ÄÂÄ"
-   MAT3[3] = "ÄÂÄ"
-   MAT3[4] = "ÄÂÄ"
-   MAT3[5] = "ÄÂÄ"
+   MAT3[1] = "â”€â”¬â”€"
+   MAT3[2] = "â”€â”¬â”€"
+   MAT3[3] = "â”€â”¬â”€"
+   MAT3[4] = "â”€â”¬â”€"
+   MAT3[5] = "â”€â”¬â”€"
    SET ORDER TO 3
    GO TOP
    DBEDIT(13,02,20,75,MAT1,"UDF2","",MAT2,MAT3)

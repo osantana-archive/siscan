@@ -34,7 +34,7 @@ ENDIF
 
 * >>> Tela Inicial
 CLEAR SCREEN
-MOLDURA(00,00,24,79,"W+/N",.T.,"Arkhan Inform†tica - Sistema de Controle de Contas - "+MAQUINA,"N/W",.F.)
+MOLDURA(00,00,24,79,"W+/N",.T.,"Arkhan Inform√°tica - Sistema de Controle de Contas - "+MAQUINA,"N/W",.F.)
 @ 23,70 SAY "by Arkhan"
 SAVE SCREEN TO ENTRASCR
 
@@ -42,7 +42,7 @@ SAVE SCREEN TO ENTRASCR
 
 PUBLIC AL[3],INDAL
 INDAL = 1
-@ 23,05 SAY "Aleat¢rios: "
+@ 23,05 SAY "Aleat√≥rios: "
 AL[1] = RIGHT(STR(INT(SECONDS() * 100)),4)
 FOR TMP = 1 TO VAL(AL[1]) / 4
   @ 23,17 SAY STRZERO(TMP,4)
@@ -90,14 +90,14 @@ PUBLIC XUSUARIO
 XUSUARIO = SPACE(6)
 IF MAQUINA ="PC1"
    DO WHILE .T.
-      @ 20,03 SAY "Usu†rio: " GET XUSUARIO PICTURE "@!"
+      @ 20,03 SAY "Usu√°rio: " GET XUSUARIO PICTURE "@!"
       SET CONFIRM ON
       SET CURSOR ON
       READ
       SET CURSOR OFF
       SET CONFIRM OFF
       IF LASTKEY() = 27 .OR. EMPTY(XUSUARIO)
-         MESSAGE("N∆o Ç poss°vel utilizar o sistema sem definir um usu†rio...")
+         MESSAGE("N‚ïûo √© poss√≠vel utilizar o sistema sem definir um usu√°rio...")
          LOOP
       ELSE
          EXIT
@@ -129,7 +129,7 @@ ENDIF
 DO WHILE .T.
    @ 04,05      PROMPT "   Produtos   "
    @ 04,COL()+3 PROMPT "    Contas    "
-   @ 04,COL()+3 PROMPT "   Operaáîes   "
+   @ 04,COL()+3 PROMPT "   Opera√ß√∂es   "
    @ 04,COL()+3 PROMPT "   Finaliza   "
    SAVE SCREEN TO VARTELA
    MENU TO OPC
@@ -139,9 +139,9 @@ DO WHILE .T.
       CASE OPC = 1
          SAVE SCREEN
          MOLDURA(05,05,12,18,STDMOLD)
-         @ 06,06 PROMPT "InclusÑo    "
-         @ 07,06 PROMPT "AlteraáÑo   "
-         @ 08,06 PROMPT "ExclusÑo    "
+         @ 06,06 PROMPT "Inclus√§o    "
+         @ 07,06 PROMPT "Altera√ß√§o   "
+         @ 08,06 PROMPT "Exclus√§o    "
          @ 09,06 PROMPT "Consulta    "
          @ 10,06 PROMPT "Des/Bloqueia"
          @ 11,06 PROMPT "Retorna     "
@@ -169,8 +169,8 @@ DO WHILE .T.
          @ 09,23 PROMPT "Haver       "
          @ 10,23 PROMPT "Totaliza    "
          @ 11,23 PROMPT "Senha       "
-         @ 12,23 PROMPT "Mudanáa     "
-         @ 13,23 PROMPT "RelaáÑo     "
+         @ 12,23 PROMPT "Mudan√ßa     "
+         @ 13,23 PROMPT "Rela√ß√§o     "
          @ 14,23 PROMPT "Listagem    "
          @ 15,23 PROMPT "Cancela     "
          @ 16,23 PROMPT "Retorna     "
@@ -236,7 +236,7 @@ DO WHILE .T.
          SAVE SCREEN
          MOLDURA(05,57,08,70,STDMOLD)
          @ 06,58 PROMPT "    Sim     "
-         @ 07,58 PROMPT "    NÑo     "
+         @ 07,58 PROMPT "    N√§o     "
          MENU TO OP1
          IF OP1 = 1
             SET CURSOR OFF

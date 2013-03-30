@@ -7,9 +7,9 @@ DO WHILE .T.
    SELECT ALUNO
    SET ORDER TO 2
    GO  TOP
-   MOLDURA(12,01,21,76,STDMOLD,.T.,"AlteraáÑo de Conta",STDINVE)
+   MOLDURA(12,01,21,76,STDMOLD,.T.,"Altera√ß√§o de Conta",STDINVE)
    HCODIGO = 0
-   @ 13,05 SAY "Entre com o N£mero:" GET HCODIGO PICTURE "9999"
+   @ 13,05 SAY "Entre com o N√∫mero:" GET HCODIGO PICTURE "9999"
    SET CURSOR ON
    READ
    SET CURSOR OFF
@@ -19,7 +19,7 @@ DO WHILE .T.
    HNUMERO = STRZERO(HCODIGO,4,0)
    SEEK HNUMERO
    IF .NOT. FOUND()
-      MESSAGE("Registro NÑo Existe!!!")
+      MESSAGE("Registro N√§o Existe!!!")
       LOOP
    ENDIF
    MESSAGE()
@@ -28,7 +28,7 @@ DO WHILE .T.
    @ 20,03 SAY "Senha: [****]"
    @ 13,21 SAY "RG:"         GET XRG       PICTURE "999.999.999-!"
    @ 14,03 SAY "Nome......:" GET XNOME     PICTURE "@!"
-   @ 15,03 SAY "Endereáo..:" GET XENDERECO PICTURE "@!"
+   @ 15,03 SAY "Endere√ßo..:" GET XENDERECO PICTURE "@!"
    @ 16,03 SAY "Bairro....:" GET XBAIRRO   PICTURE "@!"
    @ 16,52 SAY "CEP.......:" GET XCEP      PICTURE "99.999-999"
    @ 17,03 SAY "Cidade....:" GET XCIDADE   PICTURE "@!"
@@ -51,14 +51,14 @@ DO WHILE .T.
    GO TOP
    SEEK XCONTA
    IF FOUND() .AND. REGTMP <> RECNO()
-      MESSAGE("Essa conta j† existe...")
+      MESSAGE("Essa conta j√° existe...")
       LOOP
    ENDIF
    GO REGTMP
    @ 20,03 SAY "Senha: [    ]"
    @ 13,21 SAY "RG:"         GET XRG       PICTURE "999.999.999-!"
    @ 14,03 SAY "Nome......:" GET XNOME     PICTURE "@!"
-   @ 15,03 SAY "Endereáo..:" GET XENDERECO PICTURE "@!"
+   @ 15,03 SAY "Endere√ßo..:" GET XENDERECO PICTURE "@!"
    @ 16,03 SAY "Bairro....:" GET XBAIRRO   PICTURE "@!"
    @ 16,52 SAY "CEP.......:" GET XCEP      PICTURE "99.999-999"
    @ 17,03 SAY "Cidade....:" GET XCIDADE   PICTURE "@!"
@@ -78,7 +78,7 @@ DO WHILE .T.
    GO  TOP
    SEEK XRG
    IF FOUND() .AND. REGTMP <> RECNO()
-      MESSAGE("J† existe registro com esse RG...")
+      MESSAGE("J√° existe registro com esse RG...")
       LOOP
    ENDIF
    GO REGTMP
@@ -121,7 +121,7 @@ DO WHILE .T.
    HSENHA = STRZERO(VAL(HSENHA),4,0)
    MESSAGE()
 
-   XSENHA    = HSENHA  && Senha do usu†rio
+   XSENHA    = HSENHA  && Senha do usu√°rio
    XBLOQUEIO = BLOQUEIO
    XCREDITO  = CREDITO
    XSALDOS   = SALDOS

@@ -7,10 +7,10 @@ DO WHILE .T.
    SELECT ALUNO
    SET ORDER TO 2
    GO  TOP
-   MOLDURA(12,01,18,76,STDMOLD,.T.,"Reimpress„o de Senha",STDINVE)
+   MOLDURA(12,01,18,76,STDMOLD,.T.,"ReimpressÃ¤o de Senha",STDINVE)
    SETCOLOR(STDMOLD+","+STDINVE)
    HNUMERO = 0
-   @ 13,05 SAY "Entre com o N£mero:"
+   @ 13,05 SAY "Entre com o NÃºmero:"
    HNUMERO = KINPUT(13,25,4,.T.)
    IF HNUMERO = "PHIL"
       EXIT
@@ -21,7 +21,7 @@ DO WHILE .T.
    HNUMERO = STRZERO(VAL(HNUMERO),4,0)
    SEEK HNUMERO
    IF .NOT. FOUND()
-      MESSAGE("Registro N„o Existe !!!")
+      MESSAGE("Registro NÃ¤o Existe !!!")
       LOOP
    ENDIF
    MESSAGE()

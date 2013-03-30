@@ -10,7 +10,7 @@ DO WHILE .T.
    @ 20,03 SAY "Senha: [    ]"
    LOADVARS()
    @ 14,03 SAY "Nome......:" GET XNOME     PICTURE "@!"
-   @ 15,03 SAY "Endereáo..:" GET XENDERECO PICTURE "@!"
+   @ 15,03 SAY "Endere√ßo..:" GET XENDERECO PICTURE "@!"
    @ 16,03 SAY "Bairro....:" GET XBAIRRO   PICTURE "@!"
    @ 16,52 SAY "CEP.......:" GET XCEP      PICTURE "99.999-999"
    @ 17,03 SAY "Cidade....:" GET XCIDADE   PICTURE "@!"
@@ -57,7 +57,7 @@ DO WHILE .T.
    IF FOUND()
       @ 13,03 SAY "Conta.....:" GET CONTA    PICTURE "9999"
       @ 14,03 SAY "Nome......:" GET NOME     PICTURE "@!"
-      @ 15,03 SAY "Endereáo..:" GET ENDERECO PICTURE "@!"
+      @ 15,03 SAY "Endere√ßo..:" GET ENDERECO PICTURE "@!"
       @ 16,03 SAY "Bairro....:" GET BAIRRO   PICTURE "@!"
       @ 16,52 SAY "CEP.......:" GET CEP      PICTURE "99.999-999"
       @ 17,03 SAY "Cidade....:" GET CIDADE   PICTURE "@!"
@@ -66,7 +66,7 @@ DO WHILE .T.
       @ 18,52 SAY "Tipo Pgto.:" GET TIPOPGTO PICTURE "!"
       @ 20,03 SAY "Senha: [****]"
       CLEAR GETS
-      IF CONFIRM("Aluno j† cadastrado...Reimprimir senha ?")
+      IF CONFIRM("Aluno j√° cadastrado...Reimprimir senha ?")
          LIN = 01
          KPRINT(@LIN,00,CHR(14) + " Nova Conta")
          KPRINT(@LIN,00,"")
@@ -81,7 +81,7 @@ DO WHILE .T.
 * OUTROS DADOS
    
    @ 14,03 SAY "Nome......:" GET XNOME     PICTURE "@!"
-   @ 15,03 SAY "Endereáo..:" GET XENDERECO PICTURE "@!"
+   @ 15,03 SAY "Endere√ßo..:" GET XENDERECO PICTURE "@!"
    @ 16,03 SAY "Bairro....:" GET XBAIRRO   PICTURE "@!"
    @ 16,52 SAY "CEP.......:" GET XCEP      PICTURE "99.999-999"
    @ 17,03 SAY "Cidade....:" GET XCIDADE   PICTURE "@!"
@@ -136,7 +136,7 @@ DO WHILE .T.
    HSENHA = STRZERO(VAL(HSENHA),4,0)
    MESSAGE()
 
-   XSENHA    = HSENHA  && Senha do usu†rio
+   XSENHA    = HSENHA  && Senha do usu√°rio
    XBLOQUEIO = 00      && Bloqueios (branco/vermelho/azul)
    XCREDITO  = 00      && Valor em haver
    XSALDOS   = 00      && Quantidade de extratos tirados

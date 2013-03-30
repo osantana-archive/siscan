@@ -1,24 +1,24 @@
-*����������������������������������������������������������������������������Ŀ
-*�����������������������   MASTER.LIB  -  Vers�o 1.0    ����������������������
-*����������������������������������������������������������������������������Ĵ
-*�                                                                            �
-*�                                                                            �
-*� Autores............: Wagner Longo Castro, Osvaldo Santana Neto,            �
-*�                      Eduardo Guimar�es Zola                                �
-*�                                                                            �
-*�                                                                            �
-*� Empresa............: Teenagers Associates                                  �
-*�                                                                            �
-*�                                                                            �
-*����������������������������������������������������������������������������Ĵ
-*�                                      �                                     �
-*� Data de Cria��o....: 15/05/92        �       Ultima Atualiza��o.: 21/09/92 �
-*�                                      �                                     �
-*����������������������������������������������������������������������������Ĵ
-*�                                                                            �
-*�                     Biblioteca de Fun��es para Clipper                     �
-*�                                                                            �
-*������������������������������������������������������������������������������
+*┌────────────────────────────────────────────────────────────────────────────┐
+*│≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡   MASTER.LIB  -  Versäo 1.0    ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡│
+*├────────────────────────────────────────────────────────────────────────────┤
+*│                                                                            │
+*│                                                                            │
+*│ Autores............: Wagner Longo Castro, Osvaldo Santana Neto,            │
+*│                      Eduardo Guimaräes Zola                                │
+*│                                                                            │
+*│                                                                            │
+*│ Empresa............: Teenagers Associates                                  │
+*│                                                                            │
+*│                                                                            │
+*├──────────────────────────────────────┬─────────────────────────────────────┤
+*│                                      │                                     │
+*│ Data de Criaçäo....: 15/05/92        │       Ultima Atualizaçäo.: 21/09/92 │
+*│                                      │                                     │
+*├──────────────────────────────────────┴─────────────────────────────────────┤
+*│                                                                            │
+*│                     Biblioteca de Funçöes para Clipper                     │
+*│                                                                            │
+*└────────────────────────────────────────────────────────────────────────────┘
 
 
 

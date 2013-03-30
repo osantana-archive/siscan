@@ -11,12 +11,12 @@ DECLARE MAT1[3],MAT2[3],MAT3[3]
 MAT1[1] = "CODPROD"
 MAT1[2] = "NOMEPROD"
 MAT1[3] = "VALOR"
-MAT2[1] = "C¢digo"
+MAT2[1] = "CÃ³digo"
 MAT2[2] = "Produto"
 MAT2[3] = "Valor Unit."
-MAT3[1] = "ÄÂÄ"
-MAT3[2] = "ÄÂÄ"
-MAT3[3] = "ÄÂÄ"
+MAT3[1] = "â”€â”¬â”€"
+MAT3[2] = "â”€â”¬â”€"
+MAT3[3] = "â”€â”¬â”€"
 MOLDURA(12,01,21,76,STDMOLD,.T.,"Consulta de Produtos",STDINVE)
 SETCOLOR(STDMOLD+","+STDINVE) 
 SET CURSOR OFF

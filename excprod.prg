@@ -7,11 +7,11 @@ DO WHILE .T.
    MESSAGE()
    SELECT PRODUTO
    SET ORDER TO 1
-   MOLDURA(12,01,18,76,STDMOLD,.T.,"Exclus꼘 de Produtos",STDINVE)
+   MOLDURA(12,01,18,76,STDMOLD,.T.,"Exclus채o de Produtos",STDINVE)
    SETCOLOR(STDMOLD+","+STDINVE)
    LOADVARS()
    HCODPROD = 0
-   @ 13,05 SAY "C줰igo do Produto:" GET HCODPROD PICTURE "999"
+   @ 13,05 SAY "C처digo do Produto:" GET HCODPROD PICTURE "999"
    SET CURSOR ON
    READ
    SET CURSOR OFF
@@ -24,13 +24,13 @@ DO WHILE .T.
    SETCOLOR(STDMOLD)
    SEEK HCODPROD
    IF .NOT. FOUND()
-      MESSAGE("Registro n꼘 Existe !!! Tecle Algo...")
+      MESSAGE("Registro n채o Existe !!! Tecle Algo...")
       INKEY(0)
       MESSAGE()
       LOOP
    ENDIF
    COPYVARS()
-   @ 13,05 SAY "C줰igo do Produto:" GET XCODPROD  PICTURE "!!!"
+   @ 13,05 SAY "C처digo do Produto:" GET XCODPROD  PICTURE "!!!"
    @ 15,05 SAY "Nome do Produto:  " GET XNOMEPROD PICTURE "@!"
    @ 17,05 SAY "Valor do Produto: " GET XVALOR PICTURE "9,999.99"
    CLEAR GETS
@@ -38,7 +38,7 @@ DO WHILE .T.
    OPCTMP = 2
    @ 23,02 SAY "Deseja Apagar esse Registro ? "
    @ 23,COL()+2 PROMPT "  Sim  "
-   @ 23,COL()+2 PROMPT "  N꼘  "
+   @ 23,COL()+2 PROMPT "  N채o  "
    MENU TO OPCTMP
    ARROWS(.T.)
    IF OPCTMP = 1

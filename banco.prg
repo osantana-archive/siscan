@@ -1,4 +1,4 @@
-MESSAGE("Aguarde... Criando ¡ndices...")
+MESSAGE("Aguarde... Criando Ã­ndices...")
 
 SET DEFAULT TO &DIRET
 
