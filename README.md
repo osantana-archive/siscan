@@ -35,6 +35,9 @@ digitados no buffer circular de teclado. Implementei uma função para entrada d
 dados desse teclado que permitia que cada um dos alunos da escola (com conta na
 cantina) pudessem fazer seus pedidos.
 
+Infelizmente eu perdi o código fonte desse programa. Era a parte mais legal do
+sistema.
+
 Esses pedidos eram impressos no papel e entregue para as funcionárias da
 cantina buscarem os produtos.
 

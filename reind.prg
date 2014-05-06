@@ -2,7 +2,7 @@ IF MAQUINA <> "PC1"
    RETURN
 ENDIF
 
-MESSAGE("Aguarde... Criando Ã­ndices...")
+MESSAGE("Aguarde... Criando ¡ndices...")
 
 SET DEFAULT TO &DIRET
 IF FILE("C:\SISCAN\CONTROL.CLA")

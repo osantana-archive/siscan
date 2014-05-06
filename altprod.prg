@@ -6,11 +6,11 @@ SAVE SCREEN TO TMP
 DO WHILE .T.
    MESSAGE()
    SELECT PRODUTO
-   MOLDURA(12,01,18,76,STDMOLD,.T.,"Altera√ß√§o de Produtos",STDINVE)
+   MOLDURA(12,01,18,76,STDMOLD,.T.,"AlteraáÑo de Produtos",STDINVE)
    SETCOLOR(STDMOLD+","+STDINVE)
    LOADVARS()
    HCODPROD = 0
-   @ 13,05 SAY "C√≥digo do Produto:" GET HCODPROD PICTURE "999"
+   @ 13,05 SAY "C¢digo do Produto:" GET HCODPROD PICTURE "999"
    SET CURSOR ON
    READ
    SET CURSOR OFF
@@ -23,13 +23,13 @@ DO WHILE .T.
    SETCOLOR(STDMOLD)
    SEEK HCODPROD
    IF .NOT. FOUND()
-      MESSAGE("Registro n√§o Existe !!! Tecle algo...")
+      MESSAGE("Registro nÑo Existe !!! Tecle algo...")
       INKEY(0)
       MESSAGE()
       LOOP
    ENDIF
    COPYVARS()
-   @ 13,05 SAY "C√≥digo do Produto:" GET XCODPROD  PICTURE "!!!"
+   @ 13,05 SAY "C¢digo do Produto:" GET XCODPROD  PICTURE "!!!"
    @ 15,05 SAY "Nome do Produto:  " GET XNOMEPROD PICTURE "@!"
    @ 17,05 SAY "Valor do Produto: " GET XVALOR PICTURE "9,999.99"
    SET CURSOR ON
@@ -38,7 +38,7 @@ DO WHILE .T.
    REG = RECNO()
    SEEK XCODPROD
    IF FOUND() .AND. RECNO() <> REG
-      MESSAGE("Esse C√≥digo j√° Existe !!! Tecle Algo...")
+      MESSAGE("Esse C¢digo j† Existe !!! Tecle Algo...")
       INKEY(0)
       MESSAGE()
       LOOP

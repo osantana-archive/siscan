@@ -4,7 +4,7 @@
 
 SAVE SCREEN TO TMP
 RESTORE SCREEN FROM ENTRASCR
-MOLDURA(07,24,11,56,STDMOLD,.T.,"Totaliza√ß√§o",STDINVE)
+MOLDURA(07,24,11,56,STDMOLD,.T.,"TotalizaáÑo",STDINVE)
 SAVE SCREEN TO TTOTA
 SET CURSOR OFF
 DO WHILE .T.
@@ -15,7 +15,7 @@ DO WHILE .T.
    SET COLOR TO N/W
    @ 21,01 SAY ALIGN("Tecle + para pedidos.","C",78)
    SET COLOR TO W/N
-   @ 09,27 SAY "N√∫mero: "
+   @ 09,27 SAY "N£mero: "
    @ 09,42 SAY "Senha: "
    HNUMERO = KINPUT(09,35,04,.T.,"0",.T.)
    IF HNUMERO = "PHIL" .OR. HNUMERO = "TOTA"
@@ -48,7 +48,7 @@ DO WHILE .T.
       LOOP
    ENDIF
    IF SALDOS >= 1
-      @ 18,10 SAY "O Saldo s√≥ Pode ser Retirado uma Vez por Semana..."
+      @ 18,10 SAY "O Saldo s¢ Pode ser Retirado uma Vez por Semana..."
       ? CHR(7)      
       INKEY(5)
       @ 18,10 SAY "                                                  "

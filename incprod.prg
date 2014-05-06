@@ -7,7 +7,7 @@ DO WHILE .T.
    MESSAGE()
    SELECT PRODUTO
    SET ORDER TO 1
-   MOLDURA(12,01,18,76,STDMOLD,.T.,"Inclus√§o de Produtos",STDINVE)
+   MOLDURA(12,01,18,76,STDMOLD,.T.,"InclusÑo de Produtos",STDINVE)
    SETCOLOR(STDMOLD+","+STDINVE)
    LOADVARS()
    GO BOTTOM
@@ -24,7 +24,7 @@ DO WHILE .T.
          HCODTMP = VAL(CODPROD)
       ENDDO
    ENDIF
-   @ 13,05 SAY "C√≥digo do Produto:" GET HCODPROD PICTURE "999"
+   @ 13,05 SAY "C¢digo do Produto:" GET HCODPROD PICTURE "999"
    SET CURSOR ON
    READ
    SET CURSOR OFF
@@ -37,7 +37,7 @@ DO WHILE .T.
    SETCOLOR(STDMOLD)
    SEEK HCODPROD
    IF FOUND()
-      MESSAGE("Registro j√° Existe !!!")
+      MESSAGE("Registro j† Existe !!!")
       INKEY(0)
       MESSAGE()
       LOOP

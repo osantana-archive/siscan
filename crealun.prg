@@ -10,7 +10,7 @@ DO WHILE .T.
    SETCOLOR(STDMOLD+","+STDINVE)
    HNUMERO  = 00
    HCREDITO = 00
-   @ 13,05 SAY "Entre com o NÃºmero:"
+   @ 13,05 SAY "Entre com o N£mero:"
    HNUMERO = KINPUT(13,25,4,.T.)
    IF HNUMERO = "PHIL"
       EXIT
@@ -22,11 +22,11 @@ DO WHILE .T.
    HNUMERO = STRZERO(VAL(HNUMERO),4,0)
    SEEK HNUMERO
    IF .NOT. FOUND()
-      MESSAGE("Registro NÃ¤o Existe !!!")
+      MESSAGE("Registro N„o Existe !!!")
       LOOP
    ENDIF
    MESSAGE()
-   @ 15,05 SAY "CrÃ©dito atual: " + TRANSFORM(CREDITO,"9,999.99")
+   @ 15,05 SAY "Cr‚dito atual: " + TRANSFORM(CREDITO,"9,999.99")
    @ 14,05 SAY "Creditar.....:" GET HCREDITO PICTURE "9,999.99"
    SET CURSOR ON
    READ

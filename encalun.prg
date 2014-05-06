@@ -18,7 +18,7 @@ DO WHILE .T.
    ENDIF
    SEEK HNUMERO
    IF .NOT. FOUND()
-      MESSAGE("Registro N√§o Existe !!!")
+      MESSAGE("Registro NÑo Existe !!!")
       LOOP
    ENDIF
    MESSAGE()
@@ -27,7 +27,7 @@ DO WHILE .T.
    @ 13,03 SAY "Conta.....:" GET XCONTA   PICTURE "9999"
    @ 13,21 SAY "RG:"         GET XRG      PICTURE "999.999.999-!"
    @ 14,03 SAY "Nome......:" GET XNOME    PICTURE "@!"
-   @ 15,03 SAY "Endere√ßo..:" GET ENDERECO PICTURE "@!"
+   @ 15,03 SAY "Endereáo..:" GET ENDERECO PICTURE "@!"
    @ 16,03 SAY "Bairro....:" GET BAIRRO   PICTURE "@!"
    @ 16,52 SAY "CEP.......:" GET CEP      PICTURE "99.999-999"
    @ 17,03 SAY "Cidade....:" GET CIDADE   PICTURE "@!"

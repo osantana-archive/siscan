@@ -14,7 +14,7 @@ IF LASTKEY() = 27
    RETURN
 ENDIF
 SAVE TO DATAS.MEM ALL LIKE D_*
-@ 11,23 SAY ALIGN("Aguarde ImpressÃ¤o...","C",34)
+@ 11,23 SAY ALIGN("Aguarde Impress„o...","C",34)
 SELECT ALUNO
 SET ORDER TO 2
 GO  TOP
