@@ -2,7 +2,7 @@
 
 Sistema para gerenciamento de compras "fiado" em cantina escolar.
 
-![Tela de produtos](https://github.com/osantana/siscan/blob/master/tela.png "Tela de produtos")
+![Tela de produtos](https://raw.githubusercontent.com/osantana/siscan/master/tela.png "Tela de produtos")
 
 ## História
 
